@@ -6,5 +6,8 @@
     "clone": "node ./execute.js clone",
     "pull": "node ./execute.js pull",
     "checkout": "node ./execute.js checkout"
+  },
+  "dependencies": {
+    "chalk": "*"
   }
 }

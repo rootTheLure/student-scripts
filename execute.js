@@ -1,3 +1,5 @@
+const chalk = require('./node_modules/chalk');
+
 const fs = require('fs');
 const execSync = require('child_process').execSync;
 
@@ -38,15 +40,15 @@ for (let i = 0; i < students.length; i++) {
         console.log(`${operation} ${student}${courseSuf}`);
         let op = operations[operation].command(student);
         execSync(op);
-        console.log('OK\n')
+        console.log(chalk.green('OK\n'));
     } catch (e) {
         failedToClone.push(student);
     }
 }
 
 if (failedToClone.length !== 0) {
-    console.log(`Failed to ${operation} some repos:\n`);
+    console.log(chalk.bold.red(`Failed to ${operation} some repos:\n`));
     console.log(failedToClone.join('\n'));
 } else {
-    console.log('Success!');
+    console.log(chalk.bold.green('Success!'));
 }

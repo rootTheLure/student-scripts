@@ -1,0 +1,10 @@
+{
+  "name": "rs-deanery",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "clone": "node ./execute.js clone",
+    "pull": "node ./execute.js pull",
+    "checkout": "node ./execute.js checkout"
+  }
+}
